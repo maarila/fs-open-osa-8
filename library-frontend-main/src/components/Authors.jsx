@@ -6,6 +6,10 @@ const Authors = (props) => {
   }
 
   const authors = props.authors
+  const options = authors.map((author) => ({
+    value: author.name,
+    label: author.name,
+  }))
 
   return (
     <div>
@@ -26,7 +30,7 @@ const Authors = (props) => {
           ))}
         </tbody>
       </table>
-      <BirthYearForm />
+      <BirthYearForm options={options} />
     </div>
   )
 }
